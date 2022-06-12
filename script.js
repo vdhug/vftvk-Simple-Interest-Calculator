@@ -1,6 +1,37 @@
+
+
 function compute()
 {
-    p = document.getElementById("principal").value;
+    const principal = document.getElementById("principal").value;
+
+    if (!principal || principal && parseInt(principal) < 1) {
+        alert("Enter a positive number for principal.")
+        return
+    }
+    const rate = document.getElementById("rate").value;
+    const years = document.getElementById("years").value;
+    if (!years || years && parseInt(years) < 1) {
+        alert("Enter a positive number for years.")
+        return
+    }
+    const result = document.getElementById("result");
+
+    let x = ((rate * principal) / 100) * years;
+    const year = parseInt(years) + 2022;
+
+
+    let textResult = `If you deposit <span class="highlight">${principal}</span>,</br>
+        at an interest rate of <span class="highlight">${rate}%</span>.</br>
+        You will receive an amount of <span class="highlight">${x}</span>,</br>
+        in the year <span class="highlight">${year}</span>
+    `
+
+    result.innerHTML = textResult;
+
     
 }
         
+
+function updateRateValueInput(val) {
+    document.getElementById('rateValue').innerHTML=val+"%"; 
+  }

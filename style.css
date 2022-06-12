@@ -1,4 +1,69 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color: black;
+}
+
+main {
+    background-color: white;
+    border-radius: 25px;
+    margin: 50px auto;
+    width: 40vw;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: #808080;
+}
+
+main div {
+    padding: 0px 50px;
+    display: grid;
+    grid-template-areas:
+    "labelAmount amount"
+    "labelRate rate"
+    "labelYears years"
+    "button ."
+    "result result";
+    grid-template-columns: 2fr 3fr;
+    gap: 10px;
+}
+
+.labelAmount {
+    grid-area: labelAmount;
+}
+.labelRate {
+    grid-area: labelRate;
+}
+.labelYears {
+    grid-area: labelYears;
+}
+.button {
+    grid-area: button;
+}
+.result {
+    grid-area: result;
+}
 
 
+main div div {
+    padding: 0;
+    display: flex;
+}
+
+main div div input {
+    width: 100%;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.highlight {
+    background-color: #FAF44F;
+}
+
+footer {
+    margin-top: 30px;
+}
