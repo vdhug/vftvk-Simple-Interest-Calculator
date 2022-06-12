@@ -34,4 +34,21 @@ function compute()
 
 function updateRateValueInput(val) {
     document.getElementById('rateValue').innerHTML=val+"%"; 
-  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    function generateYearsOption() {
+        const years = document.getElementById("years");
+        for (let i = 1; i<=100; i++){
+            let opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = i;
+            years.appendChild(opt);
+        }
+    
+    }
+    
+    generateYearsOption();
+
+});
