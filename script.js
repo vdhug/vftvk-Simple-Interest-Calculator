@@ -6,6 +6,7 @@ function compute()
 
     if (!principal || principal && parseInt(principal) < 1) {
         alert("Enter a positive number for principal.")
+        document.getElementById("principal").focus()
         return
     }
     const rate = document.getElementById("rate").value;
