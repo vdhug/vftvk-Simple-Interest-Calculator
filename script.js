@@ -17,7 +17,9 @@ function compute()
     const result = document.getElementById("result");
 
     let x = ((rate * principal) / 100) * years;
-    const year = parseInt(years) + 2022;
+    const d = new Date();
+    let currentYear = d.getFullYear();
+    const year = parseInt(years) + currentYear;
 
 
     let textResult = `If you deposit <span class="highlight">${principal}</span>,</br>
